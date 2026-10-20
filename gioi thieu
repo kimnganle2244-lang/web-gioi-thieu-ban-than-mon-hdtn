@@ -1,0 +1,122 @@
+```html
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Đại Dương Của Le Thi Kim Ngan</title>
+
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            scroll-behavior: smooth;
+        }
+
+        body {
+            font-family: Arial, sans-serif;
+            color: white;
+            background: linear-gradient(
+                180deg,
+                #041b3d,
+                #075985,
+                #0891a8,
+                #063b63
+            );
+            overflow-x: hidden;
+        }
+
+        /* THANH ĐIỀU HƯỚNG */
+        nav {
+            position: sticky;
+            top: 0;
+            z-index: 100;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 18px 7%;
+            background: rgba(2, 25, 55, 0.9);
+            backdrop-filter: blur(12px);
+            border-bottom: 1px solid #a5f3fc44;
+        }
+
+        .logo {
+            color: #a5f3fc;
+            font-weight: bold;
+            font-size: 18px;
+        }
+
+        nav a {
+            color: white;
+            text-decoration: none;
+            margin-left: 18px;
+            transition: 0.3s;
+        }
+
+        nav a:hover {
+            color: #fda4af;
+        }
+
+        /* TRANG CHỦ */
+        .hero {
+            min-height: 90vh;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+            padding: 60px 20px;
+            position: relative;
+            background:
+                radial-gradient(
+                    circle at 50% 35%,
+                    #22d3ee33,
+                    transparent 45%
+                );
+        }
+
+        .tag {
+            display: inline-block;
+            padding: 10px 18px;
+            border: 1px solid #a5f3fc88;
+            border-radius: 30px;
+            color: #a5f3fc;
+            letter-spacing: 2px;
+            font-size: 12px;
+        }
+
+        h1 {
+            font-size: clamp(40px, 8vw, 85px);
+            margin: 25px 0;
+            line-height: 1.15;
+        }
+
+        h1 span {
+            display: block;
+            color: #a5f3fc;
+            text-shadow: 0 0 30px #22d3ee88;
+        }
+
+        .hero p {
+            max-width: 650px;
+            line-height: 1.8;
+            color: #e0faff;
+            font-size: 17px;
+        }
+
+        .button {
+            display: inline-block;
+            margin-top: 28px;
+            padding: 14px 25px;
+            background: #fda4af;
+            color: #123451;
+            border-radius: 30px;
+            text-decoration: none;
+            font-weight: bold;
+            transition: 0.3s;
+        }
+
+        .button:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 0 25
