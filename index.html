@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Đại dương của Ngân 🐳</title>
+
+    <style>
+        body {
+            margin: 0;
+            font-family: Arial, sans-serif;
+            text-align: center;
+            color: white;
+            background: linear-gradient(#0077b6, #00b4d8, #90e0ef);
+            min-height: 100vh;
+        }
+
+        header {
+            padding: 35px 15px;
+        }
+
+        h1 {
+            font-size: 36px;
+            text-shadow: 0 0 15px #ffffff;
+        }
+
+        .ocean {
+            font-size: 55px;
+            margin: 20px;
+            animation: swim 3s infinite alternate;
+        }
+
+        @keyframes swim {
+            from {
+                transform: translateX(-30px);
+            }
+            to {
+                transform: translateX(30px);
+            }
+        }
+
+        .card {
+            background: rgba(255, 255, 255, 0.2);
+            margin: 20px auto;
+            padding: 20px;
+            border-radius: 20px;
+            width: 80%;
+            max-width: 500px;
+            box-shadow: 0 0 20px #caf0f8;
+        }
+
+        button {
+            background: #caf0f8;
+            color: #023e8a;
+            border: none;
+            padding: 12px 20px;
+            border-radius: 25px;
+            font-size: 16px;
+            cursor: pointer;
+        }
+
+        button:hover {
+            box-shadow: 0 0 20px white;
+        }
+
+        .sparkle {
+            animation: blink 0.7s infinite alternate;
+        }
+
+        @keyframes blink {
+            from {
+                opacity: 0.3;
+                text-shadow: 0 0 5px white;
+            }
+            to {
+                opacity: 1;
+                text-shadow: 0 0 25px white;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <header>
+        <h1>🌊 Đại Dương Của Ngân 🌊</h1>
+        <p>Chào mừng bạn đến với thế giới nhỏ của mình!</p>
+        <div class="ocean">🐳 🐬 🐠</div>
+    </header>
+
+    <div class="card">
+        <h2>💙 Xin chào!</h2>
+        <p>Mình tên là <b>Lê Thị Kim Ngân</b>.</p>
+        <p>Mình là một người vui vẻ, yêu thích khám phá những điều mới mẻ.</p>
+    </div>
+
+    <div class="card">
+        <h2>🪸 Sở thích của mình</h2>
+        <p>🎧 Nghe nhạc</p>
+        <p>🎬 Xem phim</p>
+        <p>🌷 Đi chơi cùng bạn bè</p>
+        <p>💬 Trò chuyện và chia sẻ</p>
+    </div>
+
+    <div class="card">
+        <h2>🐚 Khám phá đại dương</h2>
+        <p>Nhấn vào nút bên dưới để khám phá điều bất ngờ nhé!</p>
+
+        <button onclick="surprise()">
+            ✨ Nhấn vào đây ✨
+        </button>
+
+        <h2 id="message"></h2>
+        <div id="fish"></div>
+    </div>
+
+    <footer>
+        <p class="sparkle">🫧 Cảm ơn bạn đã ghé thăm đại dương của Ngân! 🫧</p>
+</footer>
+
+    <script>
+        function surprise() {
+            document.getElementById("message").innerHTML =
+                "🌟 Chúc bạn luôn vui vẻ! 🌟";
+
+            document.getElementById("fish").innerHTML =
+                "<div class='ocean'>🐬 🐠 🐙 🪼 🪸</div>";
+
+            document.body.classList.add("sparkle");
+        }
+    </script>
+</body>
+</html>
