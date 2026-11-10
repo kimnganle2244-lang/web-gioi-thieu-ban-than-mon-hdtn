@@ -1,132 +1,506 @@
 <!DOCTYPE html>
 <html lang="vi">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Đại dương của Ngân 🐳</title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Lê Thị Kim Ngân | Personal Website</title>
 
-    <style>
-        body {
-            margin: 0;
-            font-family: Arial, sans-serif;
-            text-align: center;
-            color: white;
-            background: linear-gradient(#0077b6, #00b4d8, #90e0ef);
-            min-height: 100vh;
-        }
+<style>
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    scroll-behavior: smooth;
+}
 
-        header {
-            padding: 35px 15px;
-        }
+body {
+    font-family: Arial, sans-serif;
+    background: #f6f8fa;
+    color: #263746;
+    line-height: 1.7;
+}
 
-        h1 {
-            font-size: 36px;
-            text-shadow: 0 0 15px #ffffff;
-        }
+header {
+    background: rgba(255,255,255,0.95);
+    padding: 20px 8%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: sticky;
+    top: 0;
+    z-index: 100;
+    border-bottom: 1px solid #e5e9ed;
+}
 
-        .ocean {
-            font-size: 55px;
-            margin: 20px;
-            animation: swim 3s infinite alternate;
-        }
+.logo {
+    font-size: 22px;
+    font-weight: bold;
+    letter-spacing: 2px;
+    color: #315b75;
+}
 
-        @keyframes swim {
-            from {
-                transform: translateX(-30px);
-            }
-            to {
-                transform: translateX(30px);
-            }
-        }
+nav a {
+    text-decoration: none;
+    color: #536675;
+    margin-left: 22px;
+    font-size: 14px;
+}
 
-        .card {
-            background: rgba(255, 255, 255, 0.2);
-            margin: 20px auto;
-            padding: 20px;
-            border-radius: 20px;
-            width: 80%;
-            max-width: 500px;
-            box-shadow: 0 0 20px #caf0f8;
-        }
+nav a:hover {
+    color: #2b789e;
+}
 
-        button {
-            background: #caf0f8;
-            color: #023e8a;
-            border: none;
-            padding: 12px 20px;
-            border-radius: 25px;
-            font-size: 16px;
-            cursor: pointer;
-        }
+section {
+    padding: 85px 10%;
+}
 
-        button:hover {
-            box-shadow: 0 0 20px white;
-        }
+.hero {
+    min-height: 600px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    background:
+    radial-gradient(circle at 85% 25%, #d8eaf1 0%, transparent 30%),
+    linear-gradient(135deg, #edf4f7, #ffffff);
+}
 
-        .sparkle {
-            animation: blink 0.7s infinite alternate;
-        }
+.small-title {
+    color: #64869a;
+    letter-spacing: 4px;
+    font-size: 13px;
+    text-transform: uppercase;
+}
 
-        @keyframes blink {
-            from {
-                opacity: 0.3;
-                text-shadow: 0 0 5px white;
-            }
-            to {
-                opacity: 1;
-                text-shadow: 0 0 25px white;
-            }
-        }
-    </style>
+.hero h1 {
+    font-size: clamp(40px, 7vw, 76px);
+    color: #24465b;
+    line-height: 1.15;
+    margin: 20px 0;
+}
+
+.hero h1 span {
+    color: #6b9db5;
+}
+
+.hero p {
+    max-width: 550px;
+    color: #667783;
+    font-size: 17px;
+}
+
+.button {
+    display: inline-block;
+    margin-top: 30px;
+    padding: 13px 28px;
+    background: #315f78;
+    color: white;
+    border-radius: 5px;
+    text-decoration: none;
+    width: fit-content;
+    transition: 0.3s;
+}
+
+.button:hover {
+    background: #24465b;
+    transform: translateY(-3px);
+}
+
+.section-title {
+    font-size: 32px;
+    color: #294e65;
+    margin-bottom: 15px;
+}
+
+.line {
+    width: 55px;
+    height: 3px;
+    background: #82adc2;
+    margin-bottom: 35px;
+}
+
+.about-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(230px, 1fr));
+    gap: 22px;
+}
+
+.card {
+    background: white;
+    padding: 30px;
+    border-radius: 12px;
+    border: 1px solid #e7edf0;
+    box-shadow: 0 8px 25px rgba(40,70,90,0.04);
+    transition: 0.3s;
+}
+
+.card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 12px 30px rgba(40,70,90,0.09);
+}
+
+.card h3 {
+    color: #315f78;
+    margin-bottom: 12px;
+}
+
+.card p {
+    color: #6d7c85;
+    font-size: 15px;
+}
+
+.schools {
+    background: #eaf1f5;
+}
+
+.school-item {
+    background: white;
+    padding: 22px 25px;
+    margin: 15px 0;
+    border-left: 4px solid #6b9db5;
+    border-radius: 5px;
+}
+
+.school-item h3 {
+    color: #315f78;
+}
+
+.school-item p {
+    color: #7b8991;
+}
+
+.game-section {
+    background: #f0f5f7;
+    text-align: center;
+}
+
+.game-box {
+    background: white;
+    max-width: 700px;
+    margin: auto;
+    padding: 30px;
+    border-radius: 16px;
+    box-shadow: 0 10px 35px rgba(40,70,90,0.08);
+}
+
+.pond {
+    height: 300px;
+    background: linear-gradient(160deg, #9bc8d8, #347b9b);
+    border-radius: 12px;
+    margin: 25px 0;
+    position: relative;
+    overflow: hidden;
+    border: 5px solid #dceaf0;
+}
+
+.pond::before,
+.pond::after {
+    content: "";
+    position: absolute;
+    width: 250px;
+    height: 100px;
+    border: 2px solid rgba(255,255,255,0.18);
+    border-radius: 50%;
+    animation: wave 5s infinite linear;
+}
+
+.pond::before {
+    top: 40px;
+    left: -40px;
+}
+
+.pond::after {
+    bottom: 30px;
+    right: -50px;
+    animation-delay: 2s;
+}
+
+@keyframes wave {
+    from { transform: rotate(0deg); }
+    to { transform: rotate(360deg); }
+}
+
+.fish {
+    position: absolute;
+    font-size: 36px;
+    cursor: pointer;
+    user-select: none;
+    transition: 0.2s;
+    z-index: 2;
+}
+
+.fish:active {
+    transform: scale(1.4);
+}
+
+.game-info {
+    display: flex;
+    justify-content: space-around;
+    color: #315f78;
+    font-weight: bold;
+}
+
+.game-button {
+    background: #315f78;
+    border: none;
+    padding: 13px 30px;
+    color: white;
+    border-radius: 6px;
+    font-size: 16px;
+    cursor: pointer;
+}
+
+.game-button:hover {
+    background: #24465b;
+}
+
+#message {
+    margin-top: 15px;
+    color: #64869a;
+}
+
+.contact {
+    text-align: center;
+    background: white;
+}
+
+footer {
+    background: #294e65;
+    color: #dce8ee;
+    text-align: center;
+    padding: 28px;
+    font-size: 13px;
+}
+
+@media(max-width:600px) {
+    header {
+        padding: 18px 5%;
+    }
+
+    nav a {
+        margin-left: 8px;
+        font-size: 11px;
+    }
+
+    section {
+        padding: 65px 7%;
+    }
+
+    .game-box {
+        padding: 18px;
+    }
+}
+</style>
 </head>
 
 <body>
-    <header>
-        <h1>🌊 Đại Dương Của Ngân 🌊</h1>
-        <p>Chào mừng bạn đến với thế giới nhỏ của mình!</p>
-        <div class="ocean">🐳 🐬 🐠</div>
-    </header>
 
-    <div class="card">
-        <h2>💙 Xin chào!</h2>
-        <p>Mình tên là <b>Lê Thị Kim Ngân</b>.</p>
-        <p>Mình là một người vui vẻ, yêu thích khám phá những điều mới mẻ.</p>
+<header>
+    <div class="logo">KIM NGÂN.</div>
+    <nav>
+        <a href="#about">Giới thiệu</a>
+        <a href="#schools">Học tập</a>
+        <a href="#game">Trò chơi</a>
+    </nav>
+</header>
+
+<section class="hero">
+    <div class="small-title">PERSONAL WEBSITE · 2026</div>
+
+    <h1>Xin chào,<br>
+    mình là <span>Kim Ngân.</span></h1>
+
+    <p>
+        Chào mừng bạn đến với không gian cá nhân của mình.
+        Đây là nơi lưu giữ những điều mình yêu thích,
+        những trải nghiệm và một chút câu chuyện về bản thân.
+    </p>
+
+    <a href="#about" class="button">Khám phá thêm</a>
+</section>
+
+<section id="about">
+    <div class="small-title">ABOUT ME</div>
+    <h2 class="section-title">Giới thiệu bản thân</h2>
+    <div class="line"></div>
+
+    <div class="about-grid">
+
+        <div class="card">
+            <h3>Thông tin cá nhân</h3>
+            <p>
+                Họ và tên: Lê Thị Kim Ngân<br>
+                Hiện tại: Học sinh THPT Phú Nhuận<br>
+                Biệt danh: Lele, Ka Nờ, Mimi
+            </p>
+        </div>
+
+        <div class="card">
+            <h3>Sở thích</h3>
+            <p>
+                Nghe nhạc, xem phim, đi chơi,
+                trò chuyện cùng bạn bè và khám phá
+                những điều mới mẻ.
+            </p>
+        </div>
+
+        <div class="card">
+            <h3>Tính cách</h3>
+            <p>
+                Yêu thích sự sáng tạo, trân trọng
+                những mối quan hệ và luôn muốn
+                học hỏi thêm nhiều điều.
+            </p>
+        </div>
+
+        <div class="card">
+            <h3>Ước mơ</h3>
+            <p>
+                Không ngừng phát triển bản thân,
+                trải nghiệm nhiều điều thú vị
+                và tạo nên những giá trị riêng.
+            </p>
+        </div>
+
+    </div>
+</section>
+
+<section id="schools" class="schools">
+    <div class="small-title">EDUCATION</div>
+    <h2 class="section-title">Hành trình học tập</h2>
+    <div class="line"></div>
+
+    <div class="school-item">
+        <h3>01 — Tiểu học Nguyễn Thi</h3>
+        <p>Những năm tháng đầu tiên của hành trình học tập.</p>
     </div>
 
-    <div class="card">
-        <h2>🪸 Sở thích của mình</h2>
-        <p>🎧 Nghe nhạc</p>
-        <p>🎬 Xem phim</p>
-        <p>🌷 Đi chơi cùng bạn bè</p>
-        <p>💬 Trò chuyện và chia sẻ</p>
+    <div class="school-item">
+        <h3>02 — THCS Đoàn Thị Điểm</h3>
+        <p>Khoảng thời gian trưởng thành và khám phá bản thân.</p>
     </div>
 
-    <div class="card">
-        <h2>🐚 Khám phá đại dương</h2>
-        <p>Nhấn vào nút bên dưới để khám phá điều bất ngờ nhé!</p>
+    <div class="school-item">
+        <h3>03 — THPT Phú Nhuận</h3>
+        <p>Tiếp tục học hỏi, trải nghiệm và viết tiếp thanh xuân.</p>
+    </div>
+</section>
 
-        <button onclick="surprise()">
-            ✨ Nhấn vào đây ✨
+<section id="game" class="game-section">
+    <div class="small-title">MINI GAME</div>
+    <h2 class="section-title">Góc giải trí</h2>
+    <div class="line" style="margin-left:auto;margin-right:auto;"></div>
+
+    <div class="game-box">
+        <h3>Fishing Game</h3>
+        <p>Thử tài câu cá của bạn!</p>
+
+        <div class="game-info">
+            <span>Điểm: <span id="score">0</span></span>
+            <span>Thời gian: <span id="time">30</span>s</span>
+        </div>
+
+        <div class="pond" id="pond"></div>
+
+        <button class="game-button" onclick="startGame()">
+            Bắt đầu câu cá
         </button>
 
-        <h2 id="message"></h2>
-        <div id="fish"></div>
+        <p id="message">Nhấn bắt đầu để chơi nhé!</p>
     </div>
+</section>
 
-    <footer>
-        <p class="sparkle">🫧 Cảm ơn bạn đã ghé thăm đại dương của Ngân! 🫧</p>
+<section class="contact">
+    <div class="small-title">THANK YOU</div>
+    <h2 class="section-title">Cảm ơn bạn đã ghé thăm!</h2>
+    <p>
+        Mỗi người đều có một câu chuyện riêng.
+        Đây là một phần nhỏ trong câu chuyện của mình.
+    </p>
+</section>
+
+<footer>
+    © 2026 Lê Thị Kim Ngân | Personal Website
 </footer>
 
-    <script>
-        function surprise() {
-            document.getElementById("message").innerHTML =
-                "🌟 Chúc bạn luôn vui vẻ! 🌟";
+<script>
+let score = 0;
+let time = 30;
+let timer;
+let fishTimer;
+let playing = false;
 
-            document.getElementById("fish").innerHTML =
-                "<div class='ocean'>🐬 🐠 🐙 🪼 🪸</div>";
+const pond = document.getElementById("pond");
 
-            document.body.classList.add("sparkle");
+function createFish() {
+    if (!playing) return;
+
+    const fish = document.createElement("span");
+    fish.className = "fish";
+    fish.textContent = "🐟";
+
+    fish.style.left =
+        Math.random() * (pond.clientWidth - 45) + "px";
+
+    fish.style.top =
+        Math.random() * (pond.clientHeight - 45) + "px";
+
+    fish.onclick = function() {
+        if (!playing) return;
+
+        score += 10;
+
+        document.getElementById("score").textContent = score;
+
+        fish.remove();
+    };
+
+    pond.appendChild(fish);
+
+    setTimeout(() => {
+        fish.remove();
+    }, 1800);
+}
+
+function startGame() {
+    if (playing) return;
+
+    score = 0;
+    time = 30;
+    playing = true;
+
+    pond.innerHTML = "";
+
+    document.getElementById("score").textContent = score;
+    document.getElementById("time").textContent = time;
+    document.getElementById("message").textContent =
+        "Nhanh tay chạm vào những chú cá!";
+
+    fishTimer = setInterval(createFish, 700);
+
+    timer = setInterval(() => {
+        time--;
+
+        document.getElementById("time").textContent = time;
+
+        if (time <= 0) {
+            endGame();
         }
-    </script>
+    }, 1000);
+}
+
+function endGame() {
+    playing = false;
+
+    clearInterval(timer);
+    clearInterval(fishTimer);
+
+    pond.innerHTML = "";
+
+    document.getElementById("message").textContent =
+        "Trò chơi kết thúc! Bạn câu được " +
+        score + " điểm. Hãy thử lại nhé!";
+}
+</script>
+
 </body>
 </html>
